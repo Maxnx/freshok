@@ -18,6 +18,9 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
-    "sass": "^1.49.9"
+    "jquery-form-styler": "^2.0.2",
+    "mixitup": "^3.3.1",
+    "sass": "^1.49.9",
+    "slick-carousel": "^1.8.1"
   }
 }
