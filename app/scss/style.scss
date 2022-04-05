@@ -9,7 +9,7 @@
   @extend %opensans-700;
   font-size: 13px;
   line-height: 1.38;
-  color: $white;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   &__inner {
@@ -79,15 +79,15 @@
     background-repeat: no-repeat;
     background-position: 18px 50%;
     color: $green-900;
-    background-color: $white;
-    max-width: 240px;
-    width: 100%;
+    background-color: #ffffff; 
+    width: 240px;  
     padding: 15px 40px 15px 60px;
     border-radius: 6px;
     border-bottom: 1px solid #e0edcf;
     margin-right: 30px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.15s;
+    white-space: nowrap;
   }
   &__dropdown::before {
     content: "";
@@ -167,6 +167,7 @@
 
   &__search-form {
     max-width: 576px;
+    margin-right: 50px;
     width: 100%;
     position: relative;
     line-height: 1.4;
@@ -224,10 +225,7 @@
   margin-left: auto;
   &__item {
     position: relative;
-  }
-  &__item:not(:last-child) {
-    margin-right: 32px;
-  }
+  } 
   &__num {
     position: absolute;
     top: 0px;
