@@ -1,0 +1,130 @@
+.slider {
+  &__inner {
+    position: relative;
+    max-height: 600px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    min-height: 600px;
+  }
+
+  &__item-img {
+    width: 100%;
+  }
+
+  &__content {
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+    max-width: 1290px;
+    width: 100%;
+    color: $dark-500;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 24px 300px 24px 24px;
+  }
+
+  &__content-title {
+    @extend %ruda-900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    span {
+      color: $red-900;
+      display: block;
+    }
+  }
+
+  &__content-text {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+
+  .slick-slide {
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-arrow {
+    outline: transparent;
+    transition: background-color 0.15s;
+
+    svg {
+      fill: $dark-500;
+      transition: fill 0.15s;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 14px 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .slick-prev {
+    left: 60px;
+  }
+
+  .slick-next {
+    right: 60px;
+  }
+
+  .slick-disabled {
+    cursor: default;
+
+    svg {
+      fill: $silver-600;
+    }
+  }
+
+  .slick-disabled.slick-arrow:focus {
+    box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+
+    svg {
+      fill: $silver-600;
+    }
+  }
+
+  :not(.slick-disabled).slick-arrow {
+    &:focus {
+      background-color: #f2f2f2;
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+
+      svg {
+        fill: #5a5a5a;
+      }
+    }
+
+    &:hover {
+      background-color: $green-200;
+
+      svg {
+        fill: $green-900;
+      }
+    }
+  }
+
+  .slick-next.slick-arrow:active,
+  .slick-prev.slick-arrow:active {
+    background-color: #f3f3f2;
+
+    svg {
+      fill: $green-900;
+    }
+  }
+}

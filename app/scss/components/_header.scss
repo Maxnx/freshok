@@ -1,0 +1,152 @@
+.header-top {
+  background-color: $dark-800;
+  @extend %opensans-700;
+  font-size: 13px;
+  line-height: 1.38;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+  }
+  &__items {
+    display: flex;
+    padding: 14px 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__link,
+  &__menu-link {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #eff6e7;
+      border-radius: 3px;
+      outline: transparent;
+    }
+
+    &:active {
+      color: $green-200;
+    }
+  }
+
+  &__img {
+    margin-right: 12px;
+    fill: $white;
+  }
+
+  &__menu-items {
+    display: flex;
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.logo {
+  margin: 25px 24px 25px 0;
+  display: inline-block;
+  outline: transparent;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $green-200;
+    border-radius: 6px;
+  }
+}
+
+.header-bottom {
+  background-color: $green-900;
+  letter-spacing: 0.03em;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-form {
+    max-width: 576px;
+    margin-right: 50px;
+    width: 100%;
+    position: relative;
+    line-height: 1.4;
+    border-color: transparent;
+  }
+
+  &__search-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13px;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 15px 165px 15px 50px;
+    border: 1px solid transparent;
+    outline: transparent;
+    border-radius: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 13px;
+    letter-spacing: 0.03em;
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__search-input,
+  &__search-input::placeholder {
+    color: $dark-800;
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px 52px;
+    background-color: $dark-800;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-color: inherit;
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    max-height: 100%;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
