@@ -1,0 +1,44 @@
+.products {
+  &__item{
+    width: calc(25% - 30px);
+    height: 410px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__filter {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  &__filter-item {
+    
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__filter-btn {
+    @extend %filter-btn;
+  }
+
+  &__filter-btn.mixitup-control-active {
+    border-bottom: 3px solid $green-200;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  &__more {
+    text-align: center;
+  }
+}

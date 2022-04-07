@@ -1,0 +1,12 @@
+.banners {
+  padding: 0 0 72px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    border-radius: 6px;
+  }
+}
