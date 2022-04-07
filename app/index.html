@@ -119,7 +119,7 @@
 
               <ul class="user-nav">
                 <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
+                  <a class="user-nav__link user-nav__link--account" href="#">
                     <svg class="user-nav__link-img" width="25" height="32">
                       <use xlink:href="images/sprite.svg#icon-user"></use>
                     </svg>
@@ -127,7 +127,7 @@
                 </li>
 
                 <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
+                  <a class="user-nav__link user-nav__link--favorite" href="#">
                     <svg class="user-nav__link-img" width="32" height="29">
                       <use xlink:href="images/sprite.svg#icon-heart"></use>
                     </svg>
@@ -136,7 +136,7 @@
                 </li>
 
                 <li class="user-nav__item">
-                  <a class="user-nav__link" href="#">
+                  <a class="user-nav__link user-nav__link--cart" href="#">
                     <svg class="user-nav__link-img" width="32" height="31">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
                     </svg>
@@ -281,6 +281,22 @@
                     <span class="product__price--old">1999 ₽</span>
                     <span class="product__price--new">999 ₽</span>
                   </div>
+
+                  <form class="product__counter">
+                    <label class="product__counter-label sr-only" for="counter">Введите количество: </label>
+                    <button class='product__counter-minus-btn' type="button">
+                      <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                        <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
+                      </svg>
+                    </button>
+                    <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+                    <button class='product__counter-plus-btn' type="button">
+                      <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                        <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
+                      </svg>
+                    </button>
+                  </form>
+
                   <button class="button product__cart-btn">
                     <svg class="product__cart-img" width="16" height="15">
                       <use xlink:href="images/sprite.svg#icon-cart"></use>
@@ -598,7 +614,8 @@
                   <span class="product__available">В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">999<span class="product__price--currency">₽</span><span class="product__price--old">1999 ₽</span></span>
+                      <span class="product__price--new">999<span class="product__price--currency">₽</span><span
+                              class="product__price--old">1999 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -606,7 +623,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -632,7 +649,8 @@
                   <span class="product__available product__available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">777<span class="product__price--currency">₽</span><span class="product__price--old">877 ₽</span></span>
+                      <span class="product__price--new">777<span class="product__price--currency">₽</span><span
+                              class="product__price--old">877 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -640,12 +658,12 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
             </li>
- 
+
             <li class="special__item">
               <article class="product mix product--new">
                 <ul class="product__badges">
@@ -664,7 +682,8 @@
                   <span class="product__available product__available--not">НЕТ В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">440<span class="product__price--currency">₽</span><span class="product__price--old">600 ₽</span></span>
+                      <span class="product__price--new">440<span class="product__price--currency">₽</span><span
+                              class="product__price--old">600 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -672,7 +691,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -696,7 +715,8 @@
                   <span class="product__available product__available">В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">660<span class="product__price--currency">₽</span><span class="product__price--old">960 ₽</span></span>
+                      <span class="product__price--new">660<span class="product__price--currency">₽</span><span
+                              class="product__price--old">960 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -704,7 +724,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -728,7 +748,8 @@
                   <span class="product__available product__available">В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">999<span class="product__price--currency">₽</span><span class="product__price--old">1199 ₽</span></span>
+                      <span class="product__price--new">999<span class="product__price--currency">₽</span><span
+                              class="product__price--old">1199 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -736,7 +757,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -760,7 +781,8 @@
                   <span class="product__available product__available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">180<span class="product__price--currency">₽</span><span class="product__price--old">230 ₽</span></span>
+                      <span class="product__price--new">180<span class="product__price--currency">₽</span><span
+                              class="product__price--old">230 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -768,7 +790,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -792,7 +814,8 @@
                   <span class="product__available product__available">В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">3990<span class="product__price--currency">₽</span><span class="product__price--old">5990 ₽</span></span>
+                      <span class="product__price--new">3990<span class="product__price--currency">₽</span><span
+                              class="product__price--old">5990 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -800,7 +823,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -824,7 +847,8 @@
                   <span class="product__available product__available">В НАЛИЧИИ</span>
                   <div class="product__box">
                     <div class="product__price product__price--special">
-                      <span class="product__price--new">499<span class="product__price--currency">₽</span><span class="product__price--old">960 ₽</span></span>
+                      <span class="product__price--new">499<span class="product__price--currency">₽</span><span
+                              class="product__price--old">960 ₽</span></span>
                     </div>
 
                     <div class="product__rating">
@@ -832,7 +856,7 @@
                       <svg class="product__rating-img" width="16" height="16" fill="#ffb800">
                         <use xlink:href="images/sprite.svg#icon-star"></use>
                       </svg>
-                     </div> 
+                    </div>
                   </div>
                 </div>
               </article>
@@ -1010,6 +1034,115 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <div class="cart">
+    <div class="cart__header">
+      <div class="cart__title">Корзина</div>
+      <a class="cart__close-btn" href="#">
+        <svg class="cart__close-btn-img" width="24" height="24" fill="#31352B">
+          <use xlink:href="images/sprite.svg#icon-close"></use>
+        </svg>
+      </a>
+      <button class="cart__clean-btn" type="button">очистить корзину</button>
+    </div>
+
+    <div class="cart__content">
+
+      <div class="cart__items">
+
+        <div class="cart__item">
+          <article class="product mix product--new product--cart">
+            <button class="product__close-btn" type="button">
+              <svg class="product__close-btn-img" width="12" height="12" fill="#C1C1C1">
+                <use xlink:href="images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+
+            <img class="product__img product__img--cart" src="images/products/product-15.jpg" alt="товар">
+
+            <div class="product__info product__info--cart">
+              <h3 class="product__item-title product__item-title--cart">Ананас, 1 кг</h3>
+
+              <div class="product__box">
+                <div class="product__price">
+                  <span class="product__price--new">999<span class="product__price--currency">₽</span></span>
+                </div>
+              </div>
+            </div>
+
+            <form class="product__counter">
+              <label class="product__counter-label sr-only" for="counter">Введите количество: </label>
+              <button class='product__counter-minus-btn' type="button">
+                <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                  <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
+                </svg>
+              </button>
+
+              <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+              <button class='product__counter-plus-btn' type="button">
+                <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                  <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
+                </svg>
+              </button>
+            </form>
+
+            <span class="product__price--cart">999<span class="product__price--currency">₽</span></span>
+
+          </article>
+        </div>
+
+        <div class="cart__item">
+          <article class="product mix product--new product--cart">
+            <button class="product__close-btn" type="button">
+              <svg class="product__close-btn-img" width="12" height="12" fill="#C1C1C1">
+                <use xlink:href="images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+
+            <img class="product__img product__img--cart" src="images/products/product-3.jpg" alt="товар">
+
+            <div class="product__info product__info--cart">
+              <h3 class="product__item-title product__item-title--cart">Питахайя красная с белой мякотью, 1шт</h3>
+
+              <div class="product__box">
+                <div class="product__price">
+                  <span class="product__price--new">999<span class="product__price--currency">₽</span></span>
+                </div>
+              </div>
+            </div>
+
+            <form class="product__counter">
+              <label class="product__counter-label sr-only" for="counter">Введите количество: </label>
+              <button class='product__counter-minus-btn' type="button">
+                <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                  <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
+                </svg>
+              </button>
+              <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+              <button class='product__counter-plus-btn' type="button">
+                <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
+                  <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
+                </svg>
+              </button>
+            </form>
+
+            <span class="product__price--cart">999<span class="product__price--currency">₽</span></span>
+
+          </article>
+        </div>
+
+      </div>
+
+      <div class="cart__total">
+        <p class="cart__total-name">Товаров на сумму</p>
+        <div class="cart__total-cost product__price--cart">2038<span class="cart__total-cost--currency">₽</span></div>
+        <a class="cart__checkout-btn button">Оформить заказ</a>
+      </div>
+    </div>
+
+
+
   </div>
 
   <script src="js/main.min.js"></script>
