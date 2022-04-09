@@ -129,8 +129,10 @@
   }
 
   &__img {
-    object-fit: contain;
-    border-radius: 6px;
+    object-fit: cover; 
+    max-height: 215px;
+    height: 100%;  
+    width: 100%;
 
     &--special {
       width: 100px;
@@ -165,6 +167,7 @@
     margin: 57px 0 18px;
     position: relative;
     background: rgba(0, 0, 0, 0);
+    height: 215px;
 
     &:hover {
       .product__search-img {
@@ -214,6 +217,7 @@
     max-height: 55px;
     padding: 0 18px;
     margin-bottom: auto;
+    @include line-clamp(3);
 
     &--special {
       margin-bottom: auto;

@@ -112,7 +112,7 @@
                 <svg class="header-bottom__search-img" width="20" height="20">
                   <use xlink:href="images/sprite.svg#icon-search"></use>
                 </svg>
-                <input class="header-bottom__search-input" name="search" type="search"
+                <input class="header-bottom__search-input" id="search" name="search" type="search"
                        placeholder="Найти в магазине ...">
                 <button class="header-bottom__search-btn" type="submit">ПоиСК</button>
               </form>
@@ -197,7 +197,7 @@
         <div class="container">
           <ul class="advantages__inner">
 
-            <li class="advantages__item"">
+            <li class="advantages__item">
               <svg class=" advantages__img" width="50" height="50" fill="#63a60f">
               <use xlink:href="images/sprite.svg#icon-delivery"></use>
               </svg>
@@ -237,26 +237,26 @@
             </li>
 
             <li class="products__filter-item">
-              <button class="products__filter-btn" data-filter=".category-fruit" href="#">Фрукты</button>
+              <button class="products__filter-btn" data-filter=".category-fruit">Фрукты</button>
             </li>
 
             <li class="products__filter-item">
-              <button class="products__filter-btn" data-filter=".category-vegetables" href="#">ОВОЩИ</button>
+              <button class="products__filter-btn" data-filter=".category-vegetables">ОВОЩИ</button>
             </li>
 
             <li class="products__filter-item">
-              <button class="products__filter-btn" data-filter=".category-drinks" href="#">Напитки</button>
+              <button class="products__filter-btn" data-filter=".category-drinks">Напитки</button>
             </li>
 
             <li class="products__filter-item">
-              <button class="products__filter-btn" data-filter=".category-grocery" href="#">БАКАЛЕЯ</button>
+              <button class="products__filter-btn" data-filter=".category-grocery">БАКАЛЕЯ</button>
             </li>
           </ul>
 
           <ul class="products__list">
 
-            <li class="products__item">
-              <article class="product mix category-fruit product--new product--discount">
+            <li class="products__item mix category-fruit">
+              <article class="product product--new product--discount">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-50%</li>
@@ -289,7 +289,8 @@
                         <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
                       </svg>
                     </button>
-                    <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+                    <input class="product__counter-input" name="counter" id="counter" type="number" value="1" min="0" max="99"
+                           required>
                     <button class='product__counter-plus-btn' type="button">
                       <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
                         <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
@@ -306,8 +307,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-fruit">
+            <li class="products__item mix category-fruit">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-50%</li>
@@ -343,8 +344,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-fruit product--hit">
+            <li class="products__item mix category-fruit">
+              <article class="product product--hit">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-50%</li>
@@ -363,7 +364,6 @@
                   <img class="product__img" src="images/products/product-3.jpg" alt="товар">
                 </a>
 
-
                 <h3 class="product__item-title">Питахайя красная с белой мякотью, 1шт</h3>
                 <div class="product__info">
                   <div class="product__price">
@@ -378,8 +378,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-grocery">
+            <li class="products__item mix category-grocery">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-50%</li>
@@ -413,8 +413,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-vegetables product--hit">
+            <li class="products__item mix category-vegetables">
+              <article class="product product--hit">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-50%</li>
@@ -448,8 +448,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-drinks product--discount">
+            <li class="products__item mix category-drinks">
+              <article class="product product--discount">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -485,8 +485,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-grocery product--new">
+            <li class="products__item mix category-grocery">
+              <article class="product product--new">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -520,8 +520,8 @@
               </article>
             </li>
 
-            <li class="products__item">
-              <article class="product mix category-vegetables product--new">
+            <li class="products__item mix category-vegetables">
+              <article class="product product--new">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -557,7 +557,7 @@
 
           </ul>
           <div class="products__more">
-            <a class="button more-btn" type="button">Показать ещё</a>
+            <a class="button more-btn">Показать ещё</a>
           </div>
         </div>
       </section>
@@ -596,8 +596,8 @@
 
           <ul class="special__list">
 
-            <li class="special__item">
-              <article class="product mix product--new">
+            <li class="special__item mix product--new">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -629,8 +629,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--new">
+            <li class="special__item mix product--new">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -664,8 +664,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--new">
+            <li class="special__item mix product--new">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -697,8 +697,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--new">
+            <li class="special__item mix product--new">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -730,8 +730,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--new">
+            <li class="special__item mix product--new">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -763,8 +763,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--hit">
+            <li class="special__item mix product--hit">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -796,8 +796,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--hit">
+            <li class="special__item mix product--hit">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -829,8 +829,8 @@
               </article>
             </li>
 
-            <li class="special__item">
-              <article class="product mix product--hit">
+            <li class="special__item mix product--hit">
+              <article class="product">
                 <ul class="product__badges">
                   <li class="product__badge-new">Новинка</li>
                   <li class="product__badge-discount">-30%</li>
@@ -934,7 +934,7 @@
             <p class="footer__subscribe-text">Следите за нашими акциями</p>
             <form class="footer__form" action="#">
               <label class="footer__form-label sr-only" for="email">Введите email:</label>
-              <input class="footer__form-input" name="email" type="email" placeholder="email@email.com" required>
+              <input class="footer__form-input" id="email" name="email" type="email" placeholder="email@email.com" required>
               <button class="button footer__form-btn" type="submit">подписаться</button>
             </form>
           </div>
@@ -1072,14 +1072,14 @@
             </div>
 
             <form class="product__counter">
-              <label class="product__counter-label sr-only" for="counter">Введите количество: </label>
+              <label class="product__counter-label sr-only" for="product-counter">Введите количество: </label>
               <button class='product__counter-minus-btn' type="button">
                 <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
                   <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
                 </svg>
               </button>
 
-              <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+              <input class="product__counter-input" id="product-counter" type="number" value="1" min="0" max="99" required>
               <button class='product__counter-plus-btn' type="button">
                 <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
                   <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
@@ -1113,13 +1113,13 @@
             </div>
 
             <form class="product__counter">
-              <label class="product__counter-label sr-only" for="counter">Введите количество: </label>
+              <label class="product__counter-label sr-only" for="product2-counter">Введите количество: </label>
               <button class='product__counter-minus-btn' type="button">
                 <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
                   <use xlink:href="images/sprite.svg#icon-minus-btn"></use>
                 </svg>
               </button>
-              <input class="product__counter-input" name="counter" type="number" value="1" min="0" max="99" required>
+              <input class="product__counter-input" id="product2-counter" type="number" value="1" min="0" max="99" required>
               <button class='product__counter-plus-btn' type="button">
                 <svg class="product__counter-btn-image" width="16" height="16" fill="#ffffff">
                   <use xlink:href="images/sprite.svg#icon-plus-btn"></use>
