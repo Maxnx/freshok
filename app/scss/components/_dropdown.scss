@@ -8,14 +8,13 @@
   background-position: 18px 50%;
   color: $green-900;
   background-color: #ffffff;
-  width: 240px;
+  width: 242px;
   padding: 15px 40px 15px 60px;
   border-radius: 6px;
   border-bottom: 1px solid #e0edcf;
   margin-right: 30px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.15s;
-  white-space: nowrap;
 
   &__menu-img,
   &__arrow-img {

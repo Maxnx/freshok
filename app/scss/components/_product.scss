@@ -22,7 +22,7 @@
   }
 
   &__close-btn {
-    position: absolute; 
+    position: absolute;
     background-color: rgba($silver-600, 0.3);
     border: none;
     border-radius: 3px;
@@ -30,10 +30,10 @@
     right: 6px;
     width: 24px;
     height: 24px;
+  }
 
-    &-img{
-      vertical-align: middle;
-    }
+  &__close-btn-img {
+    vertical-align: middle;
   }
 
   &__counter {
@@ -129,9 +129,9 @@
   }
 
   &__img {
-    object-fit: cover; 
+    object-fit: cover;
     max-height: 215px;
-    height: 100%;  
+    height: 100%;
     width: 100%;
 
     &--special {
@@ -143,6 +143,7 @@
       width: 60px;
       height: 60px;
       margin-right: 32px;
+      object-fit: contain;
     }
   }
 
@@ -251,22 +252,22 @@
       position: relative;
       margin-bottom: 4px;
       width: fit-content;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid $silver-600;
+        pointer-events: none;
+        transform: rotate(-15deg);
+      }
     }
 
     &--currency {
       font-size: 14px;
-    }
-
-    &--old::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      border-bottom: 1px solid $silver-600;
-      pointer-events: none;
-      transform: rotate(-15deg);
     }
   }
 
@@ -340,9 +341,7 @@
     row-gap: 6px;
   }
 
-  &__badge-new,
-  &__badge-hit,
-  &__badge-discount {
+  &__badge {
     display: none;
     padding: 3px 6px 2px;
     @extend %opensans-700;
@@ -352,33 +351,42 @@
     line-height: 1;
     font-size: 10px;
     color: $white;
-  }
+    z-index: 3;
 
-  &__badge-new {
-    background-color: $green-900;
-  }
-
-  &__badge-discount {
-    background-color: $red-900;
-  }
-
-  &__badge-hit {
-    background-color: $orange-900;
-  }
-
-  &--new {
-    .product__badge-new {
+    &--new,
+    &--hit,
+    &--discount {
       display: inline-block;
     }
-  }
-  &--hit {
-    .product__badge-hit {
-      display: inline-block;
+
+    &--new {
+      background-color: $green-900;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+
+    &--discount {
+      background-color: $red-900;
     }
   }
-  &--discount {
-    .product__badge-discount {
-      display: inline-block;
-    }
-  }
+
+  // &--new {
+  //   .product__badge--new {
+  //     display: inline-block;
+  //   }
+  // }
+
+  // &--hit {
+  //   .product__badge--hit {
+  //     display: inline-block;
+  //   }
+  // }
+
+  // &--discount {
+  //   .product__badge--discount {
+  //     display: inline-block;
+  //   }
+  // }
 }

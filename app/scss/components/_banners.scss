@@ -4,9 +4,69 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    column-gap: 30px;
   }
 
   &__item {
+    text-transform: uppercase;
+    padding: 76px 32px;
+    color: $dark-500;
     border-radius: 6px;
+    height: 300px;
+    max-width: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 1;
+
+    &--first {
+      flex-grow: 2;
+      max-width: 630px;
+      color: $white;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__link,
+  &__subtitle {
+    @extend %opensans-700;
+  }
+  
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 2px solid $dark-500;
+    font-size: 14px;
+    line-height: 1;
+    transition: color 0.3s,  border-color 0.3s;
+
+    &--first{
+      border-color: $white;
+    }
+
+    &:hover{
+      color: $green-900;
+      border-color: $green-900;
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
+
+  &__title {
+    @extend %ruda-600;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    max-width: 170px;
+
+    &--first  {
+      max-width: 350px;
+    }
   }
 }

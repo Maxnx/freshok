@@ -11,18 +11,21 @@
     margin-bottom: 50px;
   }
 
-  &__filter-item:not(:last-child) {
+  &__filter-item {
     margin-right: 30px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   &__filter-btn {
     @extend %filter-btn;
+    &.mixitup-control-active {
+      border-bottom: 3px solid $green-200;
+    }
   }
-
-  &__filter-btn.mixitup-control-active {
-    border-bottom: 3px solid $green-200;
-  }
-
+ 
   &__list {
     display: flex;
     margin-bottom: 35px;

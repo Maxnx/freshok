@@ -91,14 +91,11 @@
 
   &__social {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 210px;
+    gap: 12px;
   }
-
-  &__social-item {
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-  }
-
+  
   &__social-link {
     display: block;
     width: 32px;

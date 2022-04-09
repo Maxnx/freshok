@@ -8,6 +8,7 @@
   letter-spacing: 0.03em;
 
   &__inner {
+    padding: 14px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,9 +19,11 @@
       margin-right: 48px;
     }
   }
+
   &__items {
     display: flex;
-    padding: 14px 0;
+    flex-wrap: wrap;
+    row-gap: 14px;
   }
 
   &__link {
@@ -54,6 +57,11 @@
 
   &__menu-items {
     display: flex;
+    flex-grow: 2;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 14px;
   }
 
   &__menu-item {
@@ -67,6 +75,8 @@
   margin: 25px 24px 25px 0;
   display: inline-block;
   outline: transparent;
+  max-width: 200px;
+  width: 100%;
 
   &:focus {
     box-shadow: 0 0 0 4px $green-200;

@@ -1,7 +1,32 @@
 .brands {
   &__inner {
-    padding: 0 55px;
-    display: flex;
-    justify-content: space-between;
+    .slick-list {
+      min-width: 100%;
+      min-height: 100%;
+      width: 1320px;
+    }
+
+    .slick-track {
+      margin: 0 55px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 80px;
+    min-height: 60px;
+    height: 100%;
+    margin-right: 140px;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
