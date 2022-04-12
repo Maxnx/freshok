@@ -12,9 +12,13 @@
 
   &--cart {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     padding: 12px;
+
+    @include mq("phone", max) {
+      height: 126px;
+    }
   }
 
   &:not(.product--cart):hover {
@@ -30,6 +34,10 @@
     right: 6px;
     width: 24px;
     height: 24px;
+
+    @include mq("phone", max) {
+      background-color: transparent;
+    }
   }
 
   &__close-btn-img {
@@ -42,6 +50,23 @@
     align-self: flex-end;
     margin-right: 24px;
     margin-left: auto;
+    position: relative;
+
+    @include mq("phone", max) {
+      order: -1;
+    }
+
+    &--cart {
+      position: absolute;
+      margin-right: 0;
+      bottom: 12px;
+      right: 80px;
+
+      @include mq("phone", max) {
+        bottom: 12px;
+        left: 15px;
+      }
+    }
 
     &-minus-btn,
     &-plus-btn {
@@ -129,10 +154,8 @@
   }
 
   &__img {
-    object-fit: cover;
+    object-fit: contain;
     max-height: 215px;
-    height: 100%;
-    width: 100%;
 
     &--special {
       width: 100px;
@@ -144,6 +167,11 @@
       height: 60px;
       margin-right: 32px;
       object-fit: contain;
+
+      @include mq("phone", max) {
+        margin-right: 12px;
+        align-self: flex-start;
+      }
     }
   }
 
@@ -168,7 +196,7 @@
     margin: 57px 0 18px;
     position: relative;
     background: rgba(0, 0, 0, 0);
-    height: 215px;
+    height: auto;
 
     &:hover {
       .product__search-img {
@@ -191,6 +219,10 @@
     &:hover::before {
       background-color: rgba(0, 0, 0, 0.1);
     }
+
+    @include mq("phone", max) {
+      margin-bottom: 13px; 
+    }
   }
 
   &__info {
@@ -200,29 +232,54 @@
     padding: 0 18px 18px;
     letter-spacing: 0.03em;
 
+    @include mq("phone", max) {
+      height: auto;
+      padding: 0 12px 12px;
+      margin-top: auto;
+    }
+
     &--cart {
       padding: 0;
       max-width: 165px;
       width: 100%;
       margin-right: 5px;
+
+      @include mq("phone", max) {
+        margin: 0 0 auto;
+      }
+    }
+
+    &--special {
+      @include mq("phone", max) {
+        margin: 0;
+      }
     }
   }
 
   &__item-title {
     @extend %opensans-600;
+    letter-spacing: 0.03em;
     color: $dark-900;
     width: 100%;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.4;
-    max-height: 55px;
+    // max-height: 55px;
     padding: 0 18px;
     margin-bottom: auto;
     @include line-clamp(3);
 
+    @include mq("phone", max) {
+      padding: 0 12px;
+      margin-bottom: 47px;
+    }
     &--special {
-      margin-bottom: auto;
       padding: 0;
+
+      @include mq("phone", max) {
+        margin: 0;
+        margin-bottom: auto;
+      }
     }
 
     &--cart {
@@ -245,6 +302,7 @@
       color: $dark-500;
       align-self: flex-end;
       line-height: 1.2;
+      margin-left: auto;
     }
 
     &--old {
@@ -279,12 +337,25 @@
     height: 44px;
     top: 9px;
     right: 6px;
+
+    @include mq("phone", max) {
+      padding: 0;
+      width: 24px;
+      height: 21px;
+      top: 18px;
+      right: 12px;
+
+      svg {
+        width: 24px;
+        height: 21px;
+      }
+    }
   }
 
   &__cart-btn {
     width: 32px;
     height: 32px;
-    padding: 0;
+    padding: 6px;
     background-color: $green-900;
     background-repeat: no-repeat;
     background-size: 16px 16px;
@@ -293,6 +364,10 @@
 
     svg {
       fill: $white;
+    }
+
+    @include mq("phone", max) {
+      padding: 8px;
     }
   }
 
@@ -336,8 +411,8 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    top: 15px;
-    left: 18px;
+    top: 13px;
+    left: 12px;
     row-gap: 6px;
   }
 
@@ -371,22 +446,4 @@
       background-color: $red-900;
     }
   }
-
-  // &--new {
-  //   .product__badge--new {
-  //     display: inline-block;
-  //   }
-  // }
-
-  // &--hit {
-  //   .product__badge--hit {
-  //     display: inline-block;
-  //   }
-  // }
-
-  // &--discount {
-  //   .product__badge--discount {
-  //     display: inline-block;
-  //   }
-  // }
 }

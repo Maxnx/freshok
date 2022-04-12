@@ -8,7 +8,7 @@
   background-position: 18px 50%;
   color: $green-900;
   background-color: #ffffff;
-  width: 242px;
+  min-width: 242px;
   padding: 15px 40px 15px 60px;
   border-radius: 6px;
   border-bottom: 1px solid #e0edcf;
@@ -26,15 +26,23 @@
 
   &__menu-img {
     fill: $green-900;
-    left: 18px;
+    left: 14px;
+
+    @include mq("tablet", max) {
+      fill: $dark-800;
+    }
   }
 
   &__arrow-img {
     fill: #7cb238;
     right: 18px;
+
+    @include mq("tablet", max) {
+      display: none;
+    }
   }
 
-  &:hover {
+  &--active {
     background-color: $green-200;
     position: relative;
     border-radius: 6px 6px 0 0;
@@ -62,6 +70,12 @@
     left: 0;
     right: 0;
     transition: opacity 0.3s linear, visibility 0s linear 0.1s, color 0.3s;
+
+    &--burger {
+      top: 47px;
+      left: -2px;
+      right: -1px;
+    }
   }
 
   &__item,
@@ -105,5 +119,15 @@
     &:active {
       color: $silver-600;
     }
+  }
+
+  @include mq("desktop", max) {
+    margin-right: 15px;
+  }
+
+  @include mq("tablet-2", max) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
   }
 }

@@ -89,3 +89,21 @@ $black: #000000;
     -webkit-box-orient: vertical;
   }
 }
+
+$breakpoints: (
+  "phone": 560px,
+  "tablet": 768px,
+  "tablet-2": 992px,
+  "desktop": 1320px
+);
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+   $width: map_get($breakpoints, $width);
+   @if $type == max {
+    $width: $width - 1px;
+   }
+   @media only screen and (#{$type}-width: $width) {
+    @content;
+   }
+  }
+}

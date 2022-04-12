@@ -1,0 +1,93 @@
+.burger-menu {
+  display: none;
+  margin-right: auto;
+  padding-left: 7px;
+
+  &__img {
+    stroke: $white;
+    stroke-width: 2;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 20px;
+  }
+
+  &__close-btn {
+    right: 15px;
+  }
+
+  @include mq("tablet", max) {
+    display: inherit;
+  }
+
+  &__header {
+    padding: 25px 26px 26px 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ebebeb;
+    border-bottom: transparent;
+  }
+
+  &__content {
+    z-index: 11;
+    display: none;
+    position: absolute;
+    background-color: $white;
+    // height: 100vh;
+    width: 300px;
+    top: 0;
+    left: 0;
+
+    @include mq("tablet", max) {
+      &--active {
+        display: block;
+        bottom: 0;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  &__login {
+    background-color: $green-900;
+    display: flex;
+    padding: 8px 15px;
+    width: 100%;
+  }
+
+  &__login-img {
+    display: inline;
+    margin-right: 15px;
+  }
+
+  &__link,
+  &__login-separator {
+    display: inline-flex;
+    align-items: center;
+    @extend %opensans-400;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__login-separator {
+    padding: 0 15px;
+  }
+
+  &__dropdown.dropdown {
+    height: 48px;
+    width: 100%;
+    color: $dark-800;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: none;
+    padding-left: 56px;
+    border-radius: 0;
+    border: 1px solid #ebebeb; 
+    border-top: none;
+    background-color: #ffffff;
+    fill: #000;
+  }
+}

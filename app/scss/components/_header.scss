@@ -17,6 +17,10 @@
   &__item {
     &:not(:last-child) {
       margin-right: 48px;
+
+      @include mq("tablet-2", max) {
+        margin-right: 30px;
+      }
     }
   }
 
@@ -24,11 +28,22 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 14px;
+
+    @include mq("tablet", max) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   &__link {
     display: flex;
     align-items: flex-end;
+  }
+
+  &__text {
+    @include mq("tablet", max) {
+      display: none;
+    }
   }
 
   &__link,
@@ -53,6 +68,16 @@
   &__img {
     margin-right: 12px;
     fill: $white;
+
+    @include mq("tablet", max) {
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    @include mq("tablet", max) {
+      display: none;
+    }
   }
 
   &__menu-items {
@@ -82,24 +107,93 @@
     box-shadow: 0 0 0 4px $green-200;
     border-radius: 6px;
   }
+
+  &__img {
+    display: inline-block;
+
+    &--mobile {
+      display: none;
+      width: 36px;
+    }
+
+    @include mq("tablet", max) {
+      width: 80%;
+    }
+
+    @include mq("phone", max) {
+      display: none;
+
+      &--mobile {
+        display: inline-block;
+      }
+    }
+  }
+
+  @include mq("desktop", max) {
+    margin-right: 15px;
+  }
+
+  @include mq("tablet-2", max) {
+    margin: 5px 0;
+  }
+
+  @include mq("phone", max) {
+    width: auto;
+  }
 }
 
 .header-bottom {
   background-color: $green-900;
   letter-spacing: 0.03em;
+  max-height: 110px;
 
   &__inner {
     display: flex;
     align-items: center;
+    position: relative;
+
+    @include mq("tablet", max) {
+      justify-content: space-between;
+      height: 62px;
+
+      .dropdown {
+        display: none;
+      }
+    }
   }
 
   &__search-form {
     max-width: 576px;
+    min-width: 330px;
     margin-right: 50px;
     width: 100%;
     position: relative;
     line-height: 1.4;
     border-color: transparent;
+
+    @include mq("desktop", max) {
+      margin-right: 15px;
+    }
+
+    @include mq("tablet-2", max) {
+      height: 48px;
+      position: absolute;
+      bottom: -48px;
+      min-width: calc(100% + 30px);
+      left: -15px;
+      right: -15px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    @include mq("tablet-2", max) {
+      &--active {
+        z-index: 2;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__search-img {
@@ -123,6 +217,16 @@
     &:focus {
       box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
     }
+
+    @include mq("desktop", max) {
+      padding-right: 120px;
+    }
+
+    @include mq("tablet-2", max) {
+      height: 48px;
+      border: 1px solid $dark-800;
+      border-radius: 0;
+    }
   }
 
   &__search-input,
@@ -136,8 +240,7 @@
     top: 0;
     padding: 15px 52px;
     background-color: $dark-800;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-radius: 0 6px 6px 0;
     border-color: inherit;
     text-transform: uppercase;
     color: $white;
@@ -157,6 +260,14 @@
     &:active {
       color: rgba(255, 255, 255, 0.5);
       box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @include mq("desktop", max) {
+      padding: 15px 25px;
+    }
+
+    @include mq("tablet-2", max) {
+      border-radius: 0;
     }
   }
 }
