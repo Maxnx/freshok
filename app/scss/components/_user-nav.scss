@@ -5,14 +5,28 @@
 
   &__item {
     position: relative;
+
+    &--search {
+      display: none;
+
+      @include mq("tablet-2", max) {
+        display: list-item;
+      }
+    }
+
+    &--user {
+      @include mq("tablet", max) {
+        display: none;
+      }
+    }
   }
 
   &__num {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     padding: 4px 3px;
-    width: 18px;
+    min-width: 18px;
     height: 18px;
     border-radius: 50%;
     background-color: $white;
@@ -22,6 +36,11 @@
     font-weight: 600;
     line-height: 1;
     text-align: center;
+
+    @include mq("phone", max) {
+      top: 5px;
+      left: 5px;
+    }
   }
 
   &__link-img {
@@ -30,6 +49,11 @@
     align-self: center;
     fill: $white;
     transition: opacity 0.3s;
+
+    @include mq("phone", max) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__link {
@@ -39,6 +63,8 @@
     height: 50px;
     border-radius: 3px;
     transition: background-color 0.3s;
+    border: none;
+    background-color: transparent;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.1);
@@ -55,5 +81,9 @@
         opacity: 0.5;
       }
     }
+  }
+
+  @include mq("tablet-2", max) {
+    margin-left: 0;
   }
 }
