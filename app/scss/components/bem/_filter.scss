@@ -1,0 +1,198 @@
+.filter {
+  background-color: $white;
+  z-index: 11;
+
+  &__inner {
+    background-color: $white;
+
+    .filters-close-btn {
+      position: absolute;
+      display: none;
+      right: 32px;
+      top: 29px;
+    }
+
+    @include mq("tablet-2", max) {
+      width: 320px;
+    }
+  }
+
+  &__item {
+    width: 300px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    @extend %ruda-400;
+    border-bottom: 1px solid $silver-600;
+    font-size: 24px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    padding: 18px 24px 18px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--active{
+      .filter__img{ 
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__img {
+    fill: $silver-600;
+    cursor: pointer;
+  }
+
+  &__content {
+    @extend %opensans-400;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    line-height: 1.3;
+    color: $dark-500;
+    padding: 18px;
+
+    &.filter__content--rolled-up {
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+
+      .filter__title {
+        border-bottom: transparent;
+      }
+    }
+  }
+
+  @include mq('tablet-2', max) {
+    z-index: 13;
+  }
+}
+
+.filter-category {
+  &__content {
+    height: 300px;
+    overflow: auto;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d1d1d1;
+    border-radius: 3px;
+  }
+}
+
+.filter-check {
+  &__label {
+    padding-left: 36px;
+    position: relative;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__input {
+    @extend %checkbox-hidden;
+
+    &:checked + .filter-check__checkbox {
+      background-image: url("../images/icons/icon-check.svg");
+      background-repeat: no-repeat;
+      background-size: 12px 8px;
+      background-position: center;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: $silver-100;
+    border: 1px solid $dark-500;
+    border-radius: 3px;
+  }
+}
+
+.filter-price {
+  &__from,
+  &__to {
+    width: 80px;
+    height: 40px;
+    background: $silver-100;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    text-align: center;
+    color: $dark-500;
+    font-size: 16px;
+    line-height: 1;
+    @extend %opensans-400;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+  }
+
+  &__label-from,
+  &__label-to {
+    font-size: 16px;
+    color: $silver-600;
+    line-height: 1.2;
+    @extend %ruda-400;
+    letter-spacing: 0.03em;
+
+    span {
+      @extend %opensans-400;
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+}
+
+.filter-price {
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .irs-from,
+  .irs-to,
+  .irs-single,
+  .irs-min,
+  .irs-max,
+  .irs--flat .irs-handle > i:first-child {
+    display: none;
+  }
+
+  .irs--flat .irs-line {
+    height: 2px;
+    background-color: #c4c4c4;
+  }
+
+  .irs--flat .irs-bar {
+    height: 2px;
+    background-color: $green-900;
+  }
+
+  .irs--flat .irs-handle {
+    top: 22px;
+    width: 18px;
+    height: 18px;
+    top: 17px;
+    border-radius: 50%;
+    background-color: $green-900;
+    cursor: pointer;
+  }
+}
