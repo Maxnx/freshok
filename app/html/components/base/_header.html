@@ -1,0 +1,157 @@
+<header class="header">
+  <nav class="header__nav">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__inner">
+
+          <ul class="header-top__items">
+
+            @include('../bem/_burger-menu.html')
+
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                <svg class="header-top__img" width="32" height="22">
+                  <use xlink:href="images/sprite.svg#icon-delivery-address"></use>
+                </svg>
+                <p class="header-top__text"> адрес и время доставки</p>
+              </a>
+            </li>
+
+            <li class="header-top__item">
+              <a class="header-top__link" href="#">
+                <svg class="header-top__img" width="23" height="23">
+                  <use xlink:href="images/sprite.svg#icon-phone"></use>
+                </svg>
+                <p class="header-top__text">горячая линия 24/7</p>
+              </a>
+            </li>
+          </ul>
+
+          <div class="header-top__menu">
+            <ul class="header-top__menu-items">
+              <li class="header-top__menu-item">
+                <a class="header-top__menu-link" href="#">
+                  доставка
+                </a>
+              </li>
+
+              <li class="header-top__menu-item">
+                <a class="header-top__menu-link" href="#">
+                  о нас
+                </a>
+              </li>
+
+              <li class="header-top__menu-item">
+                <a class="header-top__menu-link" href="#">
+                  новости
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="header-bottom__inner">
+          <h1 class="title sr-only">Фрешок онлайн-маркет</h1>
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="лого" width="200" height="60">
+            <img class="logo__img--mobile" src="images/logo-short.svg" alt="лого" width="60" height="60">
+          </a>
+
+          <button class="dropdown" type="button">
+
+            <div class="dropdown__title">Каталог продуктов
+              <svg class="dropdown__menu-img" width="25" height="17">
+                <use xlink:href="images/sprite.svg#icon-navigation"></use>
+              </svg>
+              <svg class="dropdown__arrow-img" width="8" height="4">
+                <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </div>
+            <ul class="dropdown__list">
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Овощи и фрукты</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Бакалея</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Молочные продукты</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Хлеб</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Мясо</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Колбаса</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Рыба</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Алкоголь</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Напитки</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Торты</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Мясо</a></li>
+              <li class="dropdown__item">
+                <a class="dropdown__link" href="#">Чай, кофе</a></li>
+            </ul>
+          </button>
+
+          <form class="header-bottom__search-form" action="#">
+            <label class="sr-only" for="search">Поиск в магазине</label>
+            <svg class="header-bottom__search-img" width="20" height="20">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
+            <input class="header-bottom__search-input" id="search" name="search" type="search"
+                   placeholder="Найти в магазине ..." required>
+            <button class="header-bottom__search-btn" type="submit">ПоиСК</button>
+          </form>
+
+          <ul class="user-nav">
+            <li class="user-nav__item user-nav__item--search">
+              <span class="sr-only">иконка поиска</span>
+              <button class="user-nav__link user-nav__link--search">
+                <svg class="user-nav__link-img" width="32" height="32">
+                  <use xlink:href="images/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </li>
+
+            <li class="user-nav__item user-nav__item--user">
+              <span class="sr-only">иконка пользователя</span>
+              <a class="user-nav__link user-nav__link--account" href="#">
+                <svg class="user-nav__link-img" width="25" height="32">
+                  <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="user-nav__item">
+              <span class="sr-only">иконка избранное</span>
+              <a class="user-nav__link user-nav__link--favorite" href="#">
+                <svg class="user-nav__link-img" width="32" height="29">
+                  <use xlink:href="images/sprite.svg#icon-heart"></use>
+                </svg>
+                <span class="user-nav__num">12</span>
+              </a>
+            </li>
+
+            <li class="user-nav__item user-nav__item--cart">
+              <span class="sr-only">иконка корзины</span>
+              <a class="user-nav__link user-nav__link--cart" href="#">
+                <svg class="user-nav__link-img" width="32" height="31">
+                  <use xlink:href="images/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="user-nav__num">12</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

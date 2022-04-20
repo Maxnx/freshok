@@ -1,0 +1,330 @@
+.catalog {
+  &__inner {
+    padding: 0 0 72px;
+    display: flex;
+
+    @include mq("tablet", max) {
+      justify-content: center;
+      padding: 0 0 36px;
+    }
+  }
+
+  &__title {
+    @extend %ruda-700;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    font-size: 42px;
+    line-height: 1.2;
+    padding: 48px 0;
+
+
+
+    @include mq("tablet", max) {
+      padding: 30px 0;
+      font-size: 30px;
+    }
+  }
+
+  &__filters {
+    margin-right: 30px;
+
+    &.catalog__filters--active {
+      @include mq("tablet-2", max) {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        height: 100vh;
+        padding: 76px 0 30px;
+
+        .filters-close-btn {
+          display: block;
+        }
+      }
+    }
+
+    @include mq("tablet-2", max) {
+      display: none;
+    }
+  }
+}
+
+.catalog-content {
+  max-width: 100%;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 48px;
+
+    &--list {
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+
+      & .catalog-content__item {
+        min-width: 466px;
+        height: 162px;
+      }
+    }
+
+    @include mq("tablet", max) {
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 24px;
+    }
+
+    @include mq("phone", max) {
+      gap: 5px;
+    }
+  }
+
+  &__item {
+    height: 410px;
+    max-width: 300px;
+    min-width: 170px;
+
+    & .product {
+      column-gap: 18px;
+
+      .product__available {
+        margin: auto 0;
+
+        @include mq("phone", max) {
+          font-size: 8px;
+        }
+      }
+
+      .product__img {
+        @include mq("tablet", max) {
+          max-height: 180px;
+        }
+
+        @include mq("phone", max) {
+          max-height: 120px;
+        }
+      }
+
+      .product__link {
+        margin: 57px 0 0;
+      }
+
+      .product__subinfo {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 18px;
+        height: 15px;
+        margin-bottom: 6px;
+        margin-top: -8px;
+        z-index: 1;
+
+        @include mq("phone", max) {
+          padding: 0 12px;
+          margin-top: -10px;
+          z-index: 2;
+        }
+      }
+
+      .product__rating {
+        @extend %opensans-700;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        color: $dark-500;
+
+        span {
+          margin-right: 3px;
+        }
+
+        @include mq("phone", max) {
+          font-size: 10px;
+        }
+      }
+
+      .product__item-title {
+        @include mq("tablet", max) {
+          margin-bottom: auto;
+        }
+      }
+    }
+
+    & .product.product--list {
+      max-width: 466px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .product__img {
+        margin: 6px 0 6px 0;
+        max-height: 150px;
+        width: 200px;
+      }
+
+      .product__link {
+        margin: 0;
+        height: 100%;
+        width: 200px;
+      }
+
+      .product__subinfo {
+        margin-top: 12px;
+        margin-right: 18px;
+        margin-bottom: 13px;
+        padding: 0;
+        min-width: 228px;
+      }
+
+      .product__favorite-btn {
+        top: 57px;
+        right: 12px;
+      }
+
+      .product__info {
+        min-width: 229px;
+        padding: 0 18px 12px 0;
+      }
+
+      .product__item-title {
+        width: 170px;
+        padding: 0;
+      }
+
+      .product__badges {
+        top: 6px;
+        left: 7px;
+      }
+    }
+
+    @include mq("tablet", max) {
+      max-width: 100%;
+    }
+
+    @include mq("phone", max) {
+      height: 344px;
+    }
+  }
+
+  &__filters {
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+    margin-bottom: 48px;
+
+    @include mq("desktop", max) {
+      gap: 0;
+    }
+
+    @include mq("tablet-2", max) {
+      margin-bottom: 30px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__filter-form,
+  &__filter-buttons {
+    display: inline-flex;
+    column-gap: 15px;
+  }
+
+  &__filter-form {
+    height: 100%;
+
+    @include mq("tablet", max) {
+      gap: 10px;
+    }
+  }
+
+  &__filter-all {
+    display: none;
+
+    @include mq("tablet-2", max) {
+      display: inline-flex;
+    }
+  }
+
+  &__filter-btn,
+  &__all-filters-btn {
+    background-color: $silver-100;
+    width: 47px;
+    height: 47px;
+    fill: $silver-600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: none;
+
+    &--active {
+      fill: $green-900;
+    }
+
+    @include mq("desktop", max) {
+      display: none;
+    }
+  }
+
+  &__all-filters-btn {
+    margin-right: 10px;
+    fill: $green-900;
+
+    svg {
+      pointer-events: none;
+    }
+
+    @include mq("tablet-2", max) {
+      display: inline-flex;
+    }
+  }
+
+  &__filter-sort,
+  &__filter-show {
+    outline: transparent;
+    height: 100%;
+    color: $dark-500;
+    border-radius: 3px;
+    border: 1px solid $silver-600;
+    line-height: 1.2;
+    padding: 12px 42px 12px 15px;
+    letter-spacing: 0.03em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @include mq("phone", max) {
+      padding-right: 26px;
+      padding-left: 6px;
+      font-size: 12px;
+    }
+  }
+
+  &__label-sort,
+  &__label-show {
+    position: relative;
+
+    &::before {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background-image: url("../../../images/icons/icon-down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include mq("phone", max) {
+        right: 12px;
+      }
+    }
+
+    &--active {
+      &::before {
+        transform: rotate(180deg);
+        top: 40%;
+      }
+    }
+  }
+}
