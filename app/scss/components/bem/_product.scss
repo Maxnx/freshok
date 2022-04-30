@@ -25,6 +25,13 @@
     border-color: $green-900;
   }
 
+  &__badges {
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    flex-direction: column;
+  }
+  
   &__close-btn {
     position: absolute;
     background-color: rgba($silver-600, 0.3);
@@ -42,6 +49,7 @@
 
   &__close-btn-img {
     vertical-align: middle;
+    pointer-events: none;
   }
 
   &__counter {
@@ -57,7 +65,7 @@
       justify-content: center;
       width: 100%;
       order: -1;
-      margin: 0 auto 12px; 
+      margin: 0 auto 12px;
     }
 
     &--cart {
@@ -100,23 +108,6 @@
       font-size: 16px;
       line-height: 16px;
       color: $dark-500;
-    }
-  }
-
-  &__available {
-    @extend %opensans-600;
-    letter-spacing: 0.03em;
-    font-size: 10px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-    color: $green-900;
-
-    &--ends-soon {
-      color: $red-900;
-    }
-    &--not {
-      color: $silver-600;
     }
   }
 
@@ -171,6 +162,7 @@
       width: 60px;
       height: 60px;
       margin-right: 32px;
+      margin-left: 0;
       object-fit: contain;
 
       @include mq("phone", max) {
@@ -229,7 +221,7 @@
       margin-bottom: 13px;
     }
   }
- 
+
   &__info {
     display: flex;
     justify-content: space-between;
@@ -334,12 +326,30 @@
     }
   }
 
+  &__cart-btn {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    background-color: $green-900;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+    border-radius: 3px;
+    z-index: 10;
+    border: none;
+
+    svg {
+      fill: $white;
+      transition: fill 0.3s, opacity 0.1s;
+    }
+
+    @include mq("phone", max) {
+      padding: 8px;
+    }
+  }
+
   &__favorite-btn {
     position: absolute;
-    background-color: transparent;
-    padding: 8px 6px;
-    width: 44px;
-    height: 44px;
     top: 9px;
     right: 6px;
 
@@ -354,101 +364,6 @@
         width: 24px;
         height: 21px;
       }
-    }
-  }
-
-  &__cart-btn {
-    width: 32px;
-    height: 32px;
-    padding: 6px;
-    background-color: $green-900;
-    background-repeat: no-repeat;
-    background-size: 16px 16px;
-    background-position: center;
-    border-radius: 3px;
-
-    svg {
-      fill: $white;
-    }
-
-    @include mq("phone", max) {
-      padding: 8px;
-    }
-  }
-
-  &__cart-btn,
-  &__favorite-btn {
-    z-index: 10;
-    border: none;
-
-    svg {
-      transition: fill 0.3s, opacity 0.1s;
-    }
-  }
-
-  &__favorite-btn {
-    svg {
-      fill: $silver-600;
-    }
-
-    &:hover {
-      svg {
-        fill: $yellow-900;
-      }
-    }
-
-    &:active {
-      svg {
-        fill: $yellow-900;
-        opacity: 0.5;
-      }
-    }
-
-    &:focus {
-      outline: transparent;
-      box-shadow: 0 0 0 3px $green-200;
-      border-radius: 3px;
-    }
-  }
-
-  &__badges {
-    position: absolute;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    top: 13px;
-    left: 12px;
-    row-gap: 6px;
-  }
-   
-  &__badge {
-    display: none;
-    padding: 3px 6px 3px;
-    @extend %opensans-700;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    border-radius: 6px;
-    line-height: 1;
-    font-size: 10px;
-    color: $white;
-    z-index: 3;
-
-    &--new,
-    &--hit,
-    &--discount {
-      display: inline-block;
-    }
-
-    &--new {
-      background-color: $green-900;
-    }
-
-    &--hit {
-      background-color: $orange-900;
-    }
-
-    &--discount {
-      background-color: $red-900;
     }
   }
 }

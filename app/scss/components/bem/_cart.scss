@@ -4,7 +4,7 @@
   width: 100%;
   background-color: $white;
   position: fixed;
-  z-index: 13;
+  z-index: 15;
   right: 0;
   top: 0;
   visibility: hidden;
@@ -64,6 +64,7 @@
     @extend %opensans-400;
     font-size: 24px;
     margin-bottom: 12px;
+    width: 80%;
 
     @include mq("phone", max) {
       font-size: 18px;
@@ -112,8 +113,7 @@
   }
 
   &__clean-btn {
-    font-size: 14px;
-    width: 100%;
+    font-size: 14px; 
     background-color: transparent;
     border: transparent;
     display: inline-flex;

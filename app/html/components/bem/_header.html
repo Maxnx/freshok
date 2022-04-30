@@ -6,7 +6,7 @@
 
           <ul class="header-top__items">
 
-            @include('../bem/_burger-menu.html')
+            @@include('../bem/_burger-menu.html')
 
             <li class="header-top__item">
               <a class="header-top__link" href="#">
@@ -62,8 +62,8 @@
             <img class="logo__img--mobile" src="images/logo-short.svg" alt="лого" width="60" height="60">
           </a>
 
-          <button class="dropdown" type="button">
-
+          <div class="dropdown"> 
+            <button class="dropdown__btn" type="button"></button>
             <div class="dropdown__title">Каталог продуктов
               <svg class="dropdown__menu-img" width="25" height="17">
                 <use xlink:href="images/sprite.svg#icon-navigation"></use>
@@ -98,7 +98,7 @@
               <li class="dropdown__item">
                 <a class="dropdown__link" href="#">Чай, кофе</a></li>
             </ul>
-          </button>
+          </div>
 
           <form class="header-bottom__search-form" action="#">
             <label class="sr-only" for="search">Поиск в магазине</label>

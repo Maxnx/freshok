@@ -17,8 +17,6 @@
     line-height: 1.2;
     padding: 48px 0;
 
-
-
     @include mq("tablet", max) {
       padding: 30px 0;
       font-size: 30px;
@@ -38,7 +36,7 @@
         height: 100vh;
         padding: 76px 0 30px;
 
-        .filters-close-btn {
+        .filters__close-btn {
           display: block;
         }
       }
@@ -87,7 +85,7 @@
     & .product {
       column-gap: 18px;
 
-      .product__available {
+      .available {
         margin: auto 0;
 
         @include mq("phone", max) {
@@ -115,7 +113,6 @@
         padding: 0 18px;
         height: 15px;
         margin-bottom: 6px;
-        margin-top: -8px;
         z-index: 1;
 
         @include mq("phone", max) {
@@ -189,7 +186,8 @@
         padding: 0;
       }
 
-      .product__badges {
+      .product__badges,
+      .badges {
         top: 6px;
         left: 7px;
       }
@@ -204,127 +202,19 @@
     }
   }
 
-  &__filters {
-    max-width: 100%;
+  &__bottom {
     display: flex;
-    justify-content: flex-end;
-    column-gap: 15px;
-    margin-bottom: 48px;
+    justify-content: space-between;
+    align-items: center;
 
-    @include mq("desktop", max) {
-      gap: 0;
+    .button{
+      @include mq("tablet", max) {
+       margin-bottom: 24px;
+      }
     }
-
-    @include mq("tablet-2", max) {
-      margin-bottom: 30px;
-      justify-content: flex-start;
-    }
-  }
-
-  &__filter-form,
-  &__filter-buttons {
-    display: inline-flex;
-    column-gap: 15px;
-  }
-
-  &__filter-form {
-    height: 100%;
 
     @include mq("tablet", max) {
-      gap: 10px;
-    }
-  }
-
-  &__filter-all {
-    display: none;
-
-    @include mq("tablet-2", max) {
-      display: inline-flex;
-    }
-  }
-
-  &__filter-btn,
-  &__all-filters-btn {
-    background-color: $silver-100;
-    width: 47px;
-    height: 47px;
-    fill: $silver-600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    border: none;
-
-    &--active {
-      fill: $green-900;
-    }
-
-    @include mq("desktop", max) {
-      display: none;
-    }
-  }
-
-  &__all-filters-btn {
-    margin-right: 10px;
-    fill: $green-900;
-
-    svg {
-      pointer-events: none;
-    }
-
-    @include mq("tablet-2", max) {
-      display: inline-flex;
-    }
-  }
-
-  &__filter-sort,
-  &__filter-show {
-    outline: transparent;
-    height: 100%;
-    color: $dark-500;
-    border-radius: 3px;
-    border: 1px solid $silver-600;
-    line-height: 1.2;
-    padding: 12px 42px 12px 15px;
-    letter-spacing: 0.03em;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-    @include mq("phone", max) {
-      padding-right: 26px;
-      padding-left: 6px;
-      font-size: 12px;
-    }
-  }
-
-  &__label-sort,
-  &__label-show {
-    position: relative;
-
-    &::before {
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      width: 11px;
-      height: 11px;
-      background-image: url("../../../images/icons/icon-down.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-
-      @include mq("phone", max) {
-        right: 12px;
-      }
-    }
-
-    &--active {
-      &::before {
-        transform: rotate(180deg);
-        top: 40%;
-      }
+      flex-direction: column;
     }
   }
 }

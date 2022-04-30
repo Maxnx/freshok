@@ -1,0 +1,104 @@
+.related {
+  padding-bottom: 46px;
+
+  &__title {
+    padding: 0 15px;
+    @extend %ruda-600;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    @include mq("tablet", max) {
+      font-size: 24px;
+    }
+
+    @include mq("phone", max) {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    height: 410px;
+    width: 300px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include mq("phone", max) {
+        margin-right: 5px;
+      }
+    }
+
+    .product .product__subinfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 18px;
+      height: 15px;
+      margin-bottom: 6px;
+      z-index: 1;
+    }
+
+    .product .product__rating {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-weight: 700;
+        color: #505050;
+        margin-right: 2px;
+      }
+    }
+
+    .product .product__item-title {
+      margin-bottom: auto;
+    }
+
+    @include mq("phone", max) {
+      max-width: 170px;
+      height: 344px;
+    }
+  }
+
+  &__list {
+    transform: translateX(15px);
+
+    .slick-arrow {
+      top: -78px;
+      right: 30px;
+    }
+
+    .slick-prev {
+      right: 120px;
+    }
+
+    .slick-dots {
+      bottom: -30px;
+      left: 0;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      li button {
+        height: 12px;
+        width: 12px;
+      } 
+    }
+
+    @include mq("phone", max) {
+      transform: none;
+      width: 345px;
+      margin: 0 auto;
+    }
+  }
+
+  @include mq("phone", max) {
+   padding-bottom: 65px;
+  }
+}

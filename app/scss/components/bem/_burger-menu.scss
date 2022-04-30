@@ -29,9 +29,9 @@
   }
 
   &__content {
-    z-index: 13;
+    z-index: 15;
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: $white; 
     width: 300px;
     top: 0;

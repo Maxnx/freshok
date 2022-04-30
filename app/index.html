@@ -247,8 +247,8 @@
             <img class="logo__img--mobile" src="images/logo-short.svg" alt="лого" width="60" height="60">
           </a>
 
-          <button class="dropdown" type="button">
-
+          <div class="dropdown"> 
+            <button class="dropdown__btn" type="button"></button>
             <div class="dropdown__title">Каталог продуктов
               <svg class="dropdown__menu-img" width="25" height="17">
                 <use xlink:href="images/sprite.svg#icon-navigation"></use>
@@ -283,7 +283,7 @@
               <li class="dropdown__item">
                 <a class="dropdown__link" href="#">Чай, кофе</a></li>
             </ul>
-          </button>
+          </div>
 
           <form class="header-bottom__search-form" action="#">
             <label class="sr-only" for="search">Поиск в магазине</label>
@@ -448,14 +448,14 @@
 
       <li class="products__item mix category-fruit">
         <article class="product product--new product--discount">
-          <ul class="product__badges">
-            <li class="product__badge product__badge--new">Новинка</li>
-            <li class="product__badge product__badge--discount">-50%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new badges__new--active">Новинка</li>
+            <li class="badges__discount badges__discount--active">-50%</li>
+            <li class="badges__hit">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
-            <svg class="product__favorite-img" width="32" height="29">
+          <button class="product__favorite-btn favorite-btn" type="button">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -502,15 +502,15 @@
 
       <li class="products__item mix category-fruit">
         <article class="product">
-          <ul class="product__badges">
-            <li class="product__badge">Новинка</li>
-            <li class="product__badge">-50%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new">Новинка</li>
+            <li class="badges__discount">-50%</li>
+            <li class="badges__hit">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -542,15 +542,15 @@
 
       <li class="products__item mix category-fruit">
         <article class="product product--hit">
-          <ul class="product__badges">
-            <li class="product__badge">Новинка</li>
-            <li class="product__badge">-50%</li>
-            <li class="product__badge product__badge--hit">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new">Новинка</li>
+            <li class="badges__discount">-50%</li>
+            <li class="badges__hit badges__hit--active">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -580,15 +580,15 @@
 
       <li class="products__item mix category-grocery">
         <article class="product">
-          <ul class="product__badges">
-            <li class="product__badge">Новинка</li>
-            <li class="product__badge">-50%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new">Новинка</li>
+            <li class="badges__discount">-50%</li>
+            <li class="badges__hit">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -618,15 +618,15 @@
 
       <li class="products__item mix category-vegetables">
         <article class="product product--hit">
-          <ul class="product__badges">
-            <li class="product__badge">Новинка</li>
-            <li class="product__badge">-50%</li>
-            <li class="product__badge product__badge--hit">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new">Новинка</li>
+            <li class="badges__discount">-50%</li>
+            <li class="badges__hit badges__hit--active">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -656,15 +656,15 @@
 
       <li class="products__item mix category-drinks">
         <article class="product product--discount">
-          <ul class="product__badges">
-            <li class="product__badge">Новинка</li>
-            <li class="product__badge product__badge--discount">-30%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new">Новинка</li>
+            <li class="badges__discount badges__discount--active">-30%</li>
+            <li class="badges__hit">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -696,15 +696,15 @@
 
       <li class="products__item mix category-grocery">
         <article class="product product--new">
-          <ul class="product__badges">
-            <li class="product__badge product__badge--new">Новинка</li>
-            <li class="product__badge">-30%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new badges__new--active">Новинка</li>
+            <li class="badges__discount">-30%</li>
+            <li class="badges__hit">хит</li>
           </ul>
 
-          <button class="product__favorite-btn" type="button">
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -734,15 +734,15 @@
 
       <li class="products__item mix category-vegetables">
         <article class="product product--new">
-          <ul class="product__badges">
-            <li class="product__badge product__badge--new">Новинка</li>
-            <li class="product__badge">-30%</li>
-            <li class="product__badge">хит</li>
+          <ul class="product__badges badges">
+            <li class="badges__new badges__new--active">Новинка</li>
+            <li class="badges__discount">-30%</li>
+            <li class="badges__hit">хит</li>
           </ul>
-
-          <button class="product__favorite-btn" type="button">
+ 
+          <button class="product__favorite-btn favorite-btn" type="button">
             <span class="sr-only">добавить в избранное</span>
-            <svg class="product__favorite-img" width="32" height="29">
+            <svg class="favorite-btn__img" width="32" height="29">
               <use xlink:href="images/sprite.svg#icon-heart"></use>
             </svg>
           </button>
@@ -824,20 +824,20 @@
     <ul class="special__list">
 
       <li class="special__item mix product--new">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge product__badge--new">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new badges__new--active">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit">хит</li>
             </ul>
-            <img class="product__img product__img--special" src="images/products/product-15.jpg" alt="товар">
 
+            <img class="product__img product__img--special" src="images/products/product-15.jpg" alt="товар">
 
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Ананас, 1 кг</h3>
 
-              <span class="product__available">В НАЛИЧИИ</span>
+              <span class="available">в наличии</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">999<span class="product__price--currency">₽</span><span
@@ -858,12 +858,12 @@
       </li>
 
       <li class="special__item mix product--new">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge product__badge--new">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new badges__new--active">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-16.jpg" alt="товар">
@@ -873,7 +873,7 @@
                 Salomoni 250г
               </h3>
 
-              <span class="product__available product__available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
+              <span class="available available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">777<span class="product__price--currency">₽</span><span
@@ -893,12 +893,12 @@
       </li>
 
       <li class="special__item mix product--new">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge product__badge--new">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new badges__new--active">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-9.jpg" alt="товар">
@@ -906,7 +906,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Клубника, 1 кг</h3>
 
-              <span class="product__available product__available--not">НЕТ В НАЛИЧИИ</span>
+              <span class="available available--not">НЕТ В НАЛИЧИИ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">440<span class="product__price--currency">₽</span><span
@@ -926,12 +926,12 @@
       </li>
 
       <li class="special__item mix product--new">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge product__badge--new">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new badges__new--active">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-10.jpg" alt="товар">
@@ -939,7 +939,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Манго, 1 шт</h3>
 
-              <span class="product__available product__available">В НАЛИЧИИ</span>
+              <span class="available">В НАЛИЧИИ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">660<span class="product__price--currency">₽</span><span
@@ -959,12 +959,12 @@
       </li>
 
       <li class="special__item mix product--new">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge product__badge--new">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new badges__new--active">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-11.jpg" alt="товар">
@@ -972,7 +972,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Лосось, 1 кг</h3>
 
-              <span class="product__available product__available">В НАЛИЧИИ</span>
+              <span class="available">В НАЛИЧИИ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">999<span class="product__price--currency">₽</span><span
@@ -992,12 +992,12 @@
       </li>
 
       <li class="special__item mix product--hit">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge product__badge--hit">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit badges__hit--active">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-12.jpg" alt="товар">
@@ -1005,7 +1005,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Сок Granini овощной 100%, 0.5л</h3>
 
-              <span class="product__available product__available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
+              <span class="available available--ends-soon">ЗАКАНЧИВАЕТСЯ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">180<span class="product__price--currency">₽</span><span
@@ -1025,12 +1025,12 @@
       </li>
 
       <li class="special__item mix product--hit">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge product__badge--hit">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit badges__hit--active">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-13.jpg" alt="товар">
@@ -1038,7 +1038,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Фруктовая корзина, 1 шт</h3>
 
-              <span class="product__available product__available">В НАЛИЧИИ</span>
+              <span class="available">В НАЛИЧИИ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">3990<span class="product__price--currency">₽</span><span
@@ -1058,12 +1058,12 @@
       </li>
 
       <li class="special__item mix product--hit">
-        <a class="product__item-link" href="#">
+        <a class="special__item-link" href="#">
           <article class="product">
-            <ul class="product__badges">
-              <li class="product__badge">Новинка</li>
-              <li class="product__badge">-30%</li>
-              <li class="product__badge product__badge--hit">хит</li>
+            <ul class="product__badges badges">
+              <li class="badges__new">Новинка</li>
+              <li class="badges__discount">-30%</li>
+              <li class="badges__hit badges__hit--active">хит</li>
             </ul>
 
             <img class="product__img product__img--special" src="images/products/product-14.jpg" alt="товар">
@@ -1071,7 +1071,7 @@
             <div class="product__info product__info--special">
               <h3 class="product__item-title product__item-title--special">Свинина мякоть, 1 кг</h3>
 
-              <span class="product__available product__available">В НАЛИЧИИ</span>
+              <span class="available">В НАЛИЧИИ</span>
               <div class="product__box">
                 <div class="product__price product__price--special">
                   <span class="product__price--new">499<span class="product__price--currency">₽</span><span
@@ -1314,7 +1314,7 @@
 <aside class="cart">
   <div class="cart__header">
     <div class="cart__title">Корзина</div>
-    <button class="cart__close-btn">
+    <button class="cart__close-btn" type="button">
       <svg class="cart__close-btn-img" width="24" height="24" fill="#31352B">
         <use xlink:href="images/sprite.svg#icon-close"></use>
       </svg>

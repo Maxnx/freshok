@@ -1,0 +1,17 @@
+.available {
+  @extend %opensans-600;
+  letter-spacing: 0.03em;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: $green-900;
+
+  &--ends-soon {
+    color: $red-900;
+  }
+
+  &--not {
+    color: $silver-600;
+  }
+}

@@ -15,7 +15,18 @@
   cursor: pointer;
   border: transparent;
   transition: background-color 0.3s, transform 0.15s, border-radius 0.3s;
-  z-index: 12;
+  z-index: 14;
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    border-radius: 3px;
+    bottom: 0;
+    background-color: transparent;
+  }
 
   &__menu-img,
   &__arrow-img {
@@ -110,7 +121,7 @@
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.03em;
-    padding: 15px 24px;
+    padding: 12px 24px;
     display: block;
     text-align: left;
 
