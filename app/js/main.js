@@ -4,7 +4,7 @@ $(function () {
     this.closest(".cart__item").remove(); 
   });
  
-  $('.product-one__slide-img').on('click', function (e) {
+  $('.product-one__slide-img').on('click', function (e) { 
     $('.product-one__slider').toggleClass('product-one__slider--active');
     $(".product-one__slider-inner").slick('setPosition');
     $('body').toggleClass('lock');
