@@ -6,8 +6,12 @@
     justify-content: flex-end;
   }
 
-  &__item,
-  &__arrows {
+  ul {
+    display: flex;
+    padding: 0 6px;
+  }
+
+  li {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -15,35 +19,29 @@
     height: 48px;
     border-radius: 3px;
     background-color: $silver-100;
-  }
 
-  &__arrows {
-    fill: $dark-500;
-
-    &--disabled {
-      fill: $silver-600;
+    &:hover {
+      border: 1px solid $silver-600;
     }
   }
 
-  &__list {
-    display: flex;
-    padding: 0 6px;
-  }
-
-  &__item {
-    &--second,
-    &--third {
-      @include mq("phone", max) {
-        display: none;
-      }
+  ul > li:nth-child(3),
+  ul > li:nth-child(5) {
+    @include mq("phone", max) {
+      display: none;
     }
   }
 
-  &__item:not(:last-child) {
+  li:not(:last-child) {
     margin-right: 6px;
   }
 
-  &__link {
+  li.active {
+    border: 1px solid $dark-500;
+    border-radius: 3px;
+  }
+
+  ul > li > a {
     @extend %opensans-400;
     color: $dark-500;
     font-size: 18px;
@@ -53,11 +51,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: transparent;
 
-    &--active {
-      border: 1px solid $dark-500;
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #e0edcf;
       border-radius: 3px;
     }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .previous svg,
+  .next svg {
+    fill: $dark-500;
+  }
+
+  .previous-off svg,
+  .next-off svg {
+    fill: $silver-600;
   }
 
   .button {

@@ -1,23 +1,25 @@
-.filter {
+.filters {
   background-color: $white;
   z-index: 11;
 
   &__inner {
     background-color: $white;
 
-    .filters-close-btn {
-      position: absolute;
-      display: none;
-      right: 32px;
-      top: 29px;
-    }
-
     @include mq("tablet-2", max) {
       width: 320px;
     }
   }
 
-  &__item {
+  &__close-btn {
+    position: absolute;
+    display: none;
+    right: 32px;
+    top: 29px;
+  }
+
+  &__price,
+  &__category,
+  &__check {
     width: 300px;
     border: 1px solid $silver-600;
     border-radius: 6px;
@@ -38,8 +40,9 @@
     justify-content: space-between;
     align-items: center;
 
-    &--active{
-      .filter__img{ 
+    &--active {
+      border-bottom: transparent;
+      .filters__img {
         transform: rotate(180deg);
       }
     }
@@ -58,23 +61,23 @@
     color: $dark-500;
     padding: 18px;
 
-    &.filter__content--rolled-up {
+    &.filters__content--rolled-up {
       padding: 0;
       height: 0;
       overflow: hidden;
 
-      .filter__title {
+      .filters__title {
         border-bottom: transparent;
       }
     }
   }
 
-  @include mq('tablet-2', max) {
+  @include mq("tablet-2", max) {
     z-index: 13;
   }
 }
 
-.filter-category {
+.category {
   &__content {
     height: 300px;
     overflow: auto;
@@ -94,7 +97,7 @@
   }
 }
 
-.filter-check {
+.check {
   &__label {
     padding-left: 36px;
     position: relative;
@@ -108,11 +111,12 @@
   &__input {
     @extend %checkbox-hidden;
 
-    &:checked + .filter-check__checkbox {
+    &:checked + .check__checkbox {
       background-image: url("../images/icons/icon-check.svg");
       background-repeat: no-repeat;
       background-size: 12px 8px;
       background-position: center;
+      border: 1px solid $dark-500;
     }
   }
 
@@ -122,14 +126,23 @@
     width: 24px;
     height: 24px;
     background: $silver-100;
-    border: 1px solid $dark-500;
+    border: 1px solid #c1c1c1;
     border-radius: 3px;
+
+    &:hover {
+      border: 1px solid $dark-500;
+    }
   }
 }
 
-.filter-price {
-  &__from,
-  &__to {
+.price {
+  &__price-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__from-input,
+  &__to-input {
     width: 80px;
     height: 40px;
     background: $silver-100;
@@ -143,6 +156,11 @@
     margin-left: 6px;
     margin-right: 6px;
     padding: 0;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px #e0edcf;
+       outline: transparent;
+    }
   }
 
   &__label-from,
@@ -158,13 +176,6 @@
       font-size: 16px;
       line-height: 1;
     }
-  }
-}
-
-.filter-price {
-  &__price-box {
-    display: flex;
-    justify-content: space-between;
   }
 
   .irs-from,

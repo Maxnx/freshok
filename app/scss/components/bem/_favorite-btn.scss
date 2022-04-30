@@ -1,0 +1,32 @@
+.favorite-btn {
+  width: 44px;
+  height: 44px;
+  padding: 8px 6px;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+
+  svg {
+    transition: fill 0.3s, opacity 0.1s;
+    fill: $silver-600;
+  }
+
+  &:hover {
+    svg {
+      fill: $yellow-900;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $yellow-900;
+      opacity: 0.5;
+    }
+  }
+
+  &:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 3px $green-200;
+    border-radius: 3px;
+  }
+}

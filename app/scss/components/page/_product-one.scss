@@ -1,0 +1,531 @@
+.product-one {
+  padding-top: 48px;
+
+  &__inner {
+    max-height: 630px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 63px;
+
+    @include mq("desktop", max) {
+      max-height: none;
+      align-items: center;
+    }
+
+    @include mq("phone", max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__close-btn {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    background-size: 50px 50px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: none;
+    transition: background-color 0.15s;
+
+    svg {
+      fill: $silver-600;
+      transition: fill 0.15s;
+      pointer-events: none;
+
+      @include mq("tablet", max) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:hover {
+      background-color: $green-200;
+
+      svg {
+        fill: $green-900;
+      }
+    }
+
+    &:active {
+      background-color: rgba($silver-600, 0.3);
+
+      svg {
+        fill: $black;
+      }
+    }
+
+    @include mq("tablet", max) {
+      width: 40px;
+      height: 40px;
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  &__slider-inner {
+    max-width: 420px;
+    visibility: hidden;
+
+    &.slick-initialized {
+      visibility: visible;
+    }
+
+    .slick-dots {
+      display: none !important;
+      position: absolute;
+      bottom: 92px;
+      left: 0;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+      }
+
+      li button {
+        height: 10px;
+        width: 10px;
+      }
+
+      @include mq("desktop", max) {
+        bottom: 60px;
+      }
+
+      @include mq("tablet", max) {
+        bottom: 20px;
+      }
+    }
+
+    @include mq("tablet-2", max) {
+      max-width: 350px;
+    }
+
+    @include mq("tablet", max) {
+      max-width: 270px;
+    }
+  }
+
+  &__slider {
+    background-color: #fff;
+    z-index: 13;
+    width: 630px;
+    height: 560px;
+    border: 1px solid $silver-600;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+
+    &.product-one__slider--active {
+      border-radius: 15px;
+      z-index: 15;
+      top: 0;
+      left: 0;
+      margin: 54px 96px;
+      position: fixed;
+      height: calc(100vh - 108px);
+      width: calc(100vw - 192px);
+
+      .product-one__close-btn {
+        display: flex;
+      }
+
+      .product-one__slider-inner.slick-initialized {
+        max-width: 750px;
+        max-height: 750px;
+        margin-top: 60px;
+        margin-bottom: auto;
+
+        @include mq("desktop", max) {
+          max-width: 600px;
+          height: 600px;
+          margin: 0;
+        }
+
+        @include mq("tablet-2", max) {
+          max-width: 450px;
+          height: 450px;
+        }
+
+        @include mq("tablet", max) {
+          max-width: 360px;
+          height: 360px;
+        }
+      }
+
+      .slick-dots {
+        display: flex !important;
+      }
+
+      .slick-arrow {
+        display: block !important;
+      }
+
+      .slick-prev {
+        left: 60px;
+
+        @include mq("tablet-2", max) {
+          left: 15px;
+        }
+
+        @include mq("phone", max) {
+          left: 0;
+        }
+      }
+
+      .slick-next {
+        right: 60px;
+
+        @include mq("tablet-2", max) {
+          right: 15px;
+        }
+
+        @include mq("phone", max) {
+          right: 0;
+        }
+      }
+
+      @include mq("desktop", max) {
+        margin: 30px 60px;
+        height: calc(100vh - 60px);
+        width: calc(100vw - 120px);
+      }
+
+      @include mq("tablet", max) {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0;
+        border: transparent;
+      }
+    }
+
+    .slick-prev {
+      left: 22px;
+    }
+
+    .slick-next {
+      right: 22px;
+    }
+
+    .slick-arrow {
+      @include mq("phone", max) {
+        display: none !important;
+      }
+    }
+
+    .slick-slider {
+      position: static;
+    }
+
+    @include mq("desktop", max) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @include mq("tablet-2", max) {
+      height: 440px;
+    }
+
+    @include mq("tablet", max) {
+      height: 310px;
+      width: 100%;
+    }
+  }
+
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  &__info {
+    max-width: 630px;
+    width: 100%;
+    letter-spacing: 0.03em;
+  }
+
+  &__title {
+    @extend %ruda-600;
+    color: $dark-900;
+    font-size: 32px;
+    line-height: 1.2;
+    padding: 22px 0 18px;
+    letter-spacing: 0.03em;
+
+    @include mq("desktop", max) {
+      width: 630px;
+      order: -1;
+      padding: 30px 0;
+    }
+
+    @include mq("tablet", max) {
+      font-size: 26px;
+      display: block;
+      text-align: center;
+      width: auto;
+    }
+
+    @include mq("phone", max) {
+      text-align: left;
+    }
+  }
+
+  &__badges {
+    gap: 10px;
+    margin-bottom: 18px;
+
+    li {
+      font-size: 16px;
+      padding: 6px 8px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    @include mq("desktop", max) {
+      row-gap: 18px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__star {
+    margin-right: auto;
+    padding: 0;
+  }
+
+  &__code {
+    margin-right: 12px;
+    line-height: 1.2;
+    padding: 4px 5px 3px;
+    border-radius: 3px;
+    color: $silver-600;
+    background-color: $silver-100;
+  }
+
+  .available {
+    font-size: 16px;
+    margin: 0;
+
+    @include mq("desktop", max) {
+      width: 100%;
+    }
+  }
+
+  &__product-price {
+    margin-bottom: 60px;
+
+    @include mq("desktop", max) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__cart-btn.cart-btn {
+    width: auto;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin-right: auto;
+    font-size: 16px;
+
+    svg {
+      margin-right: 13px;
+
+      @include mq("tablet", max) {
+        margin: 0;
+      }
+    }
+
+    span {
+      @include mq("tablet", max) {
+        display: none;
+      }
+    }
+  }
+
+  &__counter {
+    margin-right: 18px;
+  }
+
+  &__favorite-btn.favorite-btn {
+    padding: 0;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+
+  &__order-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    @extend %ruda-600;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $dark-900;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid $silver-600;
+  }
+
+  p {
+    color: $dark-500;
+
+    &:last-of-type {
+      margin-bottom: 18px;
+
+      @include mq("phone", max) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__info-link {
+    display: inline-block;
+    line-height: 0.8;
+    color: $green-900;
+    outline: transparent;
+    border-bottom: 1px solid $white;
+    transition: border-bottom-color 0.3s;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px #e0edcf;
+      border-radius: 3px;
+    }
+
+    &:hover {
+      border-bottom-color: $green-900;
+    }
+
+    &:active,
+    &--active {
+      color: $green-1000;
+      border-bottom-color: $green-1000;
+    }
+  }
+
+  @include mq("desktop", max) {
+    padding: 0;
+  }
+}
+
+.product-tabs {
+  border-top: 1px solid $silver-600;
+  padding-bottom: 72px;
+
+  .container {
+    max-width: 720px;
+  }
+
+  &__top {
+    text-align: center;
+    margin-bottom: 48px;
+
+    @include mq("tablet", max) {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top-item {
+    display: inline-block;
+    @extend %ruda-600;
+    color: $dark-900;
+    font-size: 18px;
+    line-height: 1.33;
+    padding-top: 18px;
+    text-transform: uppercase;
+    transition: color 0.15s;
+
+    &:not(:last-child) {
+      margin-right: 145px;
+
+      @include mq("tablet", max) {
+        margin-right: 0;
+      }
+    }
+
+    &--active {
+      color: $green-900;
+      position: relative;
+
+      &::before {
+        content: "";
+        transition: background-color 0.3s;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $green-900;
+      }
+    }
+
+    &:hover {
+      color: $green-900;
+    }
+
+    @include mq("phone", max) {
+      font-size: 14px;
+    }
+  }
+
+  &__content-item {
+    display: none;
+    font-size: 16px;
+    color: $dark-500;
+
+    p:not(:last-child) {
+      margin-bottom: 25px;
+
+      @include mq("phone", max) {
+        margin-bottom: 30px;
+      }
+    }
+
+    span {
+      @extend %opensans-700;
+    }
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+
+    &--specs {
+      p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include mq("phone", max) {
+    padding-bottom: 34px;
+  }
+}

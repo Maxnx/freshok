@@ -1,6 +1,6 @@
 html,
 body {
-  height: auto;
+  height: 100%;
 }
 
 body {
@@ -17,13 +17,13 @@ body {
   position: relative;
   &::after {
     content: "";
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.15);
-    z-index: 12;
+    z-index: 14;
   }
 }
 
@@ -43,7 +43,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 }
 
 .content {
@@ -58,7 +58,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1320px;
-  width: 100%;
+  width: 100%; 
+
+  &--related{
+    max-width: 1350px;
+  }
 }
 
 .title {
@@ -184,5 +188,96 @@ input[type="number"] {
     svg {
       fill: $black;
     }
+  }
+}
+
+.slick-arrow {
+  outline: transparent;
+  transition: background-color 0.15s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  svg {
+    fill: $dark-500;
+    transition: fill 0.15s;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.slick-disabled {
+  cursor: default;
+
+  svg {
+    fill: $silver-600;
+  }
+}
+
+.slick-disabled.slick-arrow:focus {
+  box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+
+  svg {
+    fill: $silver-600;
+  }
+}
+
+:not(.slick-disabled).slick-arrow {
+  &:focus {
+    background-color: #f2f2f2;
+    box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+
+    svg {
+      fill: #5a5a5a;
+    }
+  }
+
+  &:hover {
+    background-color: $green-200;
+
+    svg {
+      fill: $green-900;
+    }
+  }
+}
+
+.slick-next.slick-arrow:active,
+.slick-prev.slick-arrow:active {
+  background-color: #f3f3f2;
+
+  svg {
+    fill: $green-900;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+  width: 100%;
+
+  .slick-active button {
+    border: 1px solid $green-900;
+    background-color: $green-900;
+  }
+
+  button {
+    font-size: 0;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid $silver-600;
   }
 }

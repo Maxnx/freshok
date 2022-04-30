@@ -36,7 +36,7 @@
       width: auto;
       margin: 0px -15px;
       border-radius: 0;
-      padding: 15px; 
+      padding: 15px;
     }
   }
 
@@ -71,7 +71,7 @@
     @include mq("phone", max) {
       font-weight: 700;
       font-size: 20px;
-      margin-bottom: 15px; 
+      margin-bottom: 15px;
     }
   }
 
@@ -90,30 +90,6 @@
     align-items: center;
   }
 
-  .slick-arrow {
-    outline: transparent;
-    transition: background-color 0.15s;
-
-    svg {
-      fill: $dark-500;
-      transition: fill 0.15s;
-    }
-  }
-
-  .slick-prev,
-  .slick-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    border: none;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 14px 20px;
-    width: 60px;
-    height: 60px;
-  }
-
   .slick-prev {
     left: 60px;
   }
@@ -122,57 +98,8 @@
     right: 60px;
   }
 
-  .slick-disabled {
-    cursor: default;
-
-    svg {
-      fill: $silver-600;
-    }
-  }
-
-  .slick-disabled.slick-arrow:focus {
-    box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
-
-    svg {
-      fill: $silver-600;
-    }
-  }
-
-  :not(.slick-disabled).slick-arrow {
-    &:focus {
-      background-color: #f2f2f2;
-      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
-
-      svg {
-        fill: #5a5a5a;
-      }
-    }
-
-    &:hover {
-      background-color: $green-200;
-
-      svg {
-        fill: $green-900;
-      }
-    }
-  }
-
-  .slick-next.slick-arrow:active,
-  .slick-prev.slick-arrow:active {
-    background-color: #f3f3f2;
-
-    svg {
-      fill: $green-900;
-    }
-  }
-
   .slick-dots {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    width: 100%;
     bottom: 4%;
-    line-height: 0;
 
     li:not(:last-child) {
       margin-right: 15px;
@@ -182,16 +109,7 @@
       }
     }
 
-    .slick-active button {
-      border: 1px solid $green-900;
-      background-color: $green-900;
-    }
-
-    button {
-      font-size: 0;
-      background-color: $white;
-      border-radius: 50%;
-      border: 1px solid $silver-600;
+    button { 
       width: 20px;
       height: 20px;
 

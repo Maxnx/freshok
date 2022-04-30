@@ -14,9 +14,9 @@ const browserSync = require('browser-sync').create();
 
 
 const htmlInclude = () => {
-  return src(['app/html/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
+  return src(['app/html/**/**/*.html']) // Находит любой .html файл в папке "html", куда будем подключать другие .html файлы													
   .pipe(fileInclude({
-    prefix: '@',
+    prefix: '@@',
     basepath: '@file',
   }))
   .pipe(dest('app')) // указываем, в какую папку поместить готовый файл html
@@ -74,6 +74,7 @@ function scripts() {
     'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+    'node_modules/rateyo/min/jquery.rateyo.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'app/js/main.js'
   ])
